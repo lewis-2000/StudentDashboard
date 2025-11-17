@@ -17,7 +17,7 @@ interface GalleryProps {
 const Gallery: React.FC<GalleryProps> = ({ images, settings }) => {
   const backgroundColor = settings?.colors?.backgroundColor || "white"; // Default background color to white
 
-  const defaultImage = "/FLWeb/defaults/defaultImage.png"; // Default image
+  const defaultImage = "/Portal/defaults/defaultImage.png"; // Default image
 
   // Custom settings
   const columns = settings?.layout?.columns || 3; // Default to 3 columns

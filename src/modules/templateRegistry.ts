@@ -1,4 +1,4 @@
-// Adjusted for GitHub Pages with `basename` "/FLWeb"
+// Adjusted for GitHub Pages with `basename` "/Portal"
 import TemplateManagerAPI from "./templateManagerAPI";
 import Hero from "../components/samples/Hero";
 import BasicHero from "../components/samples/BasicHero";
@@ -26,7 +26,7 @@ const homepageTemplate = {
   name: "Homepage Template",
   author: "Your Company",
   authorUrl: "https://github.com/your-company",
-  preview: "/FLWeb/previews/homepage.jpeg", // Image URL for preview
+  preview: "/Portal/previews/homepage.jpeg", // Image URL for preview
   components: [
     {
       component: BasicHero,
@@ -93,7 +93,7 @@ const aboutTemplate = {
   name: "About Us Template",
   author: "Your Company",
   authorUrl: "https://github.com/your-company",
-  preview: "/FLWeb/previews/about.jpeg", // Image URL for preview
+  preview: "/Portal/previews/about.jpeg", // Image URL for preview
   components: [
     {
       component: Hero,
@@ -132,7 +132,7 @@ const base01Template = {
   name: "Base Template 01",
   author: "Your Company",
   authorUrl: "https://github.com/your-company",
-  preview: "/FLWeb/previews/base01.jpeg", // Image URL for preview
+  preview: "/Portal/previews/base01.jpeg", // Image URL for preview
   components: [
     {
       component: ImageBackgroundHero,
@@ -140,7 +140,7 @@ const base01Template = {
         title: "Centered Hero Title Text",
         subtitle: "Centered Hero Subtitle",
         buttonText: "Hero Button",
-        backgroundImageUrl: "/FLWeb/img2.jpg", // Image URL
+        backgroundImageUrl: "/Portal/img2.jpg", // Image URL
       },
       settings: {
         layout: {
@@ -172,12 +172,12 @@ const base02Template = {
   name: "Base Template 02",
   author: "Your Company",
   authorUrl: "https://github.com/your-company",
-  preview: "/FLWeb/previews/base02.jpeg", // Image URL for preview
+  preview: "/Portal/previews/base02.jpeg", // Image URL for preview
   components: [
     {
       component: NavbarLeft,
       data: {
-        logo: "/FLWeb/logo.png", // Image URL for logo
+        logo: "/Portal/logo.png", // Image URL for logo
         links: [
           { name: "Home", url: "#" },
           { name: "About", url: "#" },
@@ -196,11 +196,11 @@ const base02Template = {
         title: "Welcome to My Hero Section Title",
         subtitle: "Subtitle static text",
         backgroundImages: [
-          "/FLWeb/img1.jpg",
-          "/FLWeb/img2.jpg",
-          "/FLWeb/img3.jpg",
-          "/FLWeb/img4.jpg",
-          "/FLWeb/img5.webp",
+          "/Portal/img1.jpg",
+          "/Portal/img2.jpg",
+          "/Portal/img3.jpg",
+          "/Portal/img4.jpg",
+          "/Portal/img5.webp",
         ],
       },
     },
@@ -228,7 +228,7 @@ const base03Template = {
   name: "Base Template 03",
   author: "Your Company",
   authorUrl: "https://github.com/your-company",
-  preview: "/FLWeb/previews/base03.jpeg", // Image URL for preview
+  preview: "/Portal/previews/base03.jpeg", // Image URL for preview
   components: [
     {
       component: VideoBackgroundHero,
@@ -236,7 +236,7 @@ const base03Template = {
         title: "Centered Hero Title Text",
         subtitle: "Centered Hero subtitle",
         buttonText: "Hero Button",
-        videoUrl: "/FLWeb/vid1.mp4", // Video URL
+        videoUrl: "/Portal/vid1.mp4", // Video URL
       },
       settings: {
         layout: {
@@ -270,7 +270,7 @@ TemplateManagerAPI.registerTemplate({
   name: "Artsy Gallery",
   author: "FL",
   authorUrl: "https://github.com/lewis-2000",
-  preview: "/FLWeb/previews/base03.jpeg", // Image URL for preview
+  preview: "/Portal/previews/base03.jpeg", // Image URL for preview
   components: [
     {
       component: HeroActionrightPictureLeft,
@@ -278,7 +278,7 @@ TemplateManagerAPI.registerTemplate({
         title: "Centered Hero Title Text",
         subtitle: "Centered Hero subtitle",
         buttonText: "Hero Button",
-        bgUrl: "/FLWeb/fairyGroup.png", // Image URL
+        bgUrl: "/Portal/fairyGroup.png", // Image URL
       },
       settings: {
         layout: {
@@ -307,15 +307,15 @@ TemplateManagerAPI.registerTemplate({
       component: Gallery,
       data: {
         images: [
-          "/FLWeb/defaults/defaultImage.jpg",
-          "/FLWeb/defaults/defaultImage.jpg",
-          "/FLWeb/defaults/defaultImage.jpg",
-          "/FLWeb/defaults/defaultImage.jpg",
-          "/FLWeb/defaults/defaultImage.jpg",
-          "/FLWeb/defaults/defaultImage.jpg",
-          "/FLWeb/defaults/defaultImage.jpg",
-          "/FLWeb/defaults/defaultImage.jpg",
-          "/FLWeb/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
+          "/Portal/defaults/defaultImage.jpg",
         ],
       },
       settings: {
@@ -372,12 +372,12 @@ TemplateManagerAPI.registerTemplate({
   name: "V22",
   author: "Your Company",
   authorUrl: "https://github.com/your-company",
-  preview: "/FLWeb/defaults/defaultImage.png", // Image URL for preview
+  preview: "/Portal/defaults/defaultImage.png", // Image URL for preview
   components: [
     {
       component: V22Nav,
       data: {
-        logo: "/FLWeb/logo.png", // Image URL for logo
+        logo: "/Portal/logo.png", // Image URL for logo
         links: [
           { name: "Bio", url: "#" },
           { name: "Work", url: "#" },
@@ -409,7 +409,7 @@ TemplateManagerAPI.registerTemplate({
       data: {
         title: "Welcome to My Hero Section Title",
         subtitle: "Subtitle static text",
-        bgUrl: "/FLWeb/flowerField.jpg", // Image URL
+        bgUrl: "/Portal/flowerField.jpg", // Image URL
       },
     },
 
@@ -421,7 +421,7 @@ TemplateManagerAPI.registerTemplate({
         subtitle: "Subtitle static text",
         about:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.", //About description
-        image: "/FLWeb/defaults/defaultImage.png", // Image URL
+        image: "/Portal/defaults/defaultImage.png", // Image URL
       },
       settings: {
         layout: {
@@ -454,7 +454,7 @@ TemplateManagerAPI.registerTemplate({
         heading: "Current Work",
         title: "John Doe and CO.",
 
-        image: "/FLWeb/defaults/defaultImage.png", // Image URL
+        image: "/Portal/defaults/defaultImage.png", // Image URL
       },
       settings: {
         layout: {
@@ -484,7 +484,7 @@ TemplateManagerAPI.registerTemplate({
       component: V22Experience,
       data: {
         heading: "Operating Experience",
-        image: "/FLWeb/fieldVector.png", // Image URL
+        image: "/Portal/fieldVector.png", // Image URL
         experience1:
           "Designed and implemented scalable backend systems, ensuring high availability and low latency across distributed architectures.",
         experience2:
@@ -525,7 +525,7 @@ TemplateManagerAPI.registerTemplate({
       component: V22Background,
       data: {
         heading: "Explore Your Path", // Background-specific heading
-        image: "/FLWeb/", // Optional background image URL
+        image: "/Portal/", // Optional background image URL
         description:
           "Set the tone for your journey with a visually captivating background that aligns with your vision.", // Relevant description
         gridItems: [
@@ -569,7 +569,7 @@ TemplateManagerAPI.registerTemplate({
       data: {
         quote: "The journey of a thousand miles begins with a single step.", // Inspirational quote
         author: "Lao Tzu", // Author of the quote
-        image: "/FLWeb/quoteBackground.png", // Optional background image
+        image: "/Portal/quoteBackground.png", // Optional background image
       },
       settings: {
         layout: {
