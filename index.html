@@ -2,12 +2,125 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FLWeb - Templating Engine</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>MKU Student Portal</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- Topbar -->
+    <div class="topbar">
+      <div class="logo">
+        <img src="./assets/logoandname.png" alt="MKU Logo with label" />
+      </div>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+
+    <!-- Desktop Navbar -->
+    <ul class="navbar" id="navbar">
+      <li class="active" data-section="home">🏠 Home</li>
+      <li data-section="personal-info">📝 Personal Info</li>
+      <li data-section="fees">💰 Fees</li>
+      <li data-section="timetable">📅 Timetable</li>
+      <li data-section="course-registration">📚 Course Registration</li>
+      <li data-section="results">🎓 Results</li>
+      <li data-section="requests">✉️ My Requests</li>
+    </ul>
+
+    <!-- Sidebar (mobile) -->
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li class="active" data-section="home">🏠 Home</li>
+        <li data-section="personal-info">📝 Personal Info</li>
+        <li data-section="fees">💰 Fees</li>
+        <li data-section="timetable">📅 Timetable</li>
+        <li data-section="course-registration">📚 Course Registration</li>
+        <li data-section="results">🎓 Results</li>
+        <li data-section="requests">✉️ My Requests</li>
+      </ul>
+    </div>
+
+    <!-- Main content -->
+    <div class="main">
+      <div id="home" class="section active">
+        <h2>Home</h2>
+        <p>Welcome to the MKU Student Portal.</p>
+      </div>
+
+      <div id="personal-info" class="section">
+        <h2>Personal Information</h2>
+        <p>Update your details here.</p>
+      </div>
+
+      <div id="fees" class="section">
+        <h2>Fees</h2>
+        <p>Check your fee statements here.</p>
+      </div>
+
+      <div id="timetable" class="section">
+        <h2>Timetable</h2>
+        <p>Your teaching and exam timetable will appear here.</p>
+      </div>
+
+      <div id="course-registration" class="section">
+        <h2>Course Registration</h2>
+        <p>Register for courses here.</p>
+      </div>
+
+      <div id="results" class="section">
+        <h2>Results</h2>
+        <p>View your exam results here.</p>
+      </div>
+
+      <div id="requests" class="section">
+        <h2>My Requests</h2>
+        <p>Submit and track requests.</p>
+      </div>
+    </div>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const sidebar = document.getElementById("sidebar");
+      const navbarItems = document.querySelectorAll("#navbar li");
+      const sidebarItems = document.querySelectorAll("#sidebar li");
+      const sections = document.querySelectorAll(".section");
+
+      // Mobile sidebar toggle
+      hamburger.addEventListener("click", () => {
+        sidebar.classList.toggle("collapsed");
+      });
+
+      function switchSection(sectionId) {
+        // Remove active from all
+        navbarItems.forEach((i) => i.classList.remove("active"));
+        sidebarItems.forEach((i) => i.classList.remove("active"));
+        sections.forEach((sec) => sec.classList.remove("active"));
+
+        // Activate selected
+        const target = document.getElementById(sectionId);
+        if (target) target.classList.add("active");
+
+        // Sync active on both navbar and sidebar
+        navbarItems.forEach((i) => {
+          if (i.dataset.section === sectionId) i.classList.add("active");
+        });
+        sidebarItems.forEach((i) => {
+          if (i.dataset.section === sectionId) i.classList.add("active");
+        });
+      }
+
+      // Add click listeners
+      navbarItems.forEach((item) => {
+        item.addEventListener("click", () =>
+          switchSection(item.dataset.section)
+        );
+      });
+
+      sidebarItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          switchSection(item.dataset.section);
+          if (window.innerWidth <= 768) sidebar.classList.add("collapsed");
+        });
+      });
+    </script>
   </body>
 </html>

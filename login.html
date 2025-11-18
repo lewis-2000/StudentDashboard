@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portal Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script type="module" src="./auth.js" defer></script>
+  <link rel="stylesheet" href="./styles/login.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <img src="./assets/logo.jpeg" alt="University Logo" />
+    </div>
+    <h2>Student Portal Login</h2>
+
+<form id="loginForm">
+  <label for="studentId">Student ID / Reg Number</label>
+  <small class="input-note">
+    Type your Student ID / Registration Number. Use full registration year (e.g. ../2010).
+  </small>
+  <input 
+    type="text" 
+    id="studentId" 
+    placeholder="Eg: MKU/12345/2019"
+    required
+  />
+
+  <label for="password">Password</label>
+  <small class="input-note">
+    Initial password is your National ID, Passport Number, Mobile Number, or Telephone Number (without spaces).
+  </small>
+  <input 
+    type="password" 
+    id="password" 
+    placeholder="Enter your password"
+    required
+  />
+
+  <button class="btn" type="submit">Login</button>
+</form>
+
+
+    <p class="note">
+      Initial password is your National ID / Passport / Mobile Number.<br>
+      Use full registration year (e.g. 2019).
+    </p>
+
+    <a class="small-link" id="toggleOffer" href="#">New Applicant? Generate Letter of Offer</a>
+
+    <div id="offerSection" style="display:none; margin-top:1rem;">
+      <label>Application Ref. No:</label>
+      <small style="display:block; color:#555; margin-top:0.25rem; font-size:0.8rem;">Enter your Application Reference Number, or Index Number + Exam Year (e.g. 01234567001/2015).</small></label>
+      <input type="text" id="appRef" placeholder="Eg: 01234567001/2015" />
+      <button class="btn" id="downloadOffer">Download Letter of Offer</button>
+    </div>
+  </div>
+
+<script>
+  const toggle = document.getElementById('toggleOffer');
+  const section = document.getElementById('offerSection');
+  const downloadBtn = document.getElementById('downloadOffer');
+
+  toggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    section.style.display = section.style.display === 'none' ? 'block' : 'none';
+  });
+
+  downloadBtn.addEventListener('click', () => {
+    const ref = document.getElementById('appRef').value.trim();
+    if (!ref) return alert('Please enter Application Ref. No');
+
+    const link = document.createElement('a');
+    link.href = `./assets/sample.pdf`;
+    link.download = ref + '.pdf';
+    link.click();
+  });
+</script>
+</body>
+</html>
